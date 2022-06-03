@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Password Generator</h1>
+        <h1><span>Password Generator</span></h1>
       </header>
       <div class="card">
         <div class="card-header">
@@ -18,25 +18,30 @@
         </div>
 
         <div class="card-body">
+          <div>
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          <button onclick="passwordCopy()" id="copy">Copy Password</button>
+          </div>
           <!-- password criterion -->
           <form id="stopDefultValue" class="form">
             <label for="length">Number of Characters</label>
             <input type="numbers" value="8" min="8" max="128" id="length" />
+
             <label for="uppercase">Include Uppercase</label>
             <input type="checkbox" id="uppercase" />
             <!-- <label for="lowercase">Include Lowercase</label>
           <input type="checkbox" id="lowercase"> -->
             <label for="numbers">Include Numbers</label>
             <input type="checkbox" id="numbers" />
-            <label for="symbols">Include Special-Characters</label>
 
+            <label for="symbols">Include Special-Characters</label>
             <input type="checkbox" id="symbols" />
+
             <div class="card-footer">
               <button type="submit" id="generate" class="btn">
                 Generate Password

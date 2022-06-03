@@ -3,49 +3,58 @@
 *::after {
   box-sizing: border-box;
 }
-
-html,
-
 body {
-  height: 100%;
+  height: auto;
   background-color: blanchedalmond;
   font-family: sans-serif;
-  display: flex;
-  justify-content: center;
+    justify-items: center;
+    align-self: center;
 }
+
+html,
+body 
+.wrapper {
+  height: 80%;
+  margin: 0;
+  padding: 24px;
+  viewport-fit: contain;
+}
+
 .wrapper {
   background-color: rgb(79, 72, 61);
-height: 80%;
-  margin: 1rem;
-  padding: 0;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+
 }
 
 header {
   margin: 0;
   text-align: center;
   padding: 20px;
-  padding-top: 0px;
   color: #f2f2f2;
+  justify-content: center;
+
+}
+span {
+  border-bottom: 3px solid #fa6262;
 }
 
 .card {
-  display: flex;
   background-color: rgba(250, 207, 98, 0.988);
   border-radius: 3rem;
-  border-width: 1rem solid black;
-  box-shadow: rgba(169, 161, 161, 0.15) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 18%, 35%);
   font-size: 18px;
-  margin:  auto;
-  max-width:none;
-  padding: 30px 40px;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: inherit;
+  padding: 40px;
+  
 }
 
 .card-header::after {
@@ -54,45 +63,15 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  float: left;
 }
 
 .card-body {
   min-height: 100px;
-}
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+  justify-self: center;
+  padding: 30px;
 }
 
-
-.form {
-  display: grid;
-  grid-template-columns: auto auto;
-  row-gap: 1rem;
-  column-gap: 3rem;
-  justify-content: center;
-  align-items: center;
-}
-
-label{
-  font-weight: bold;
-}
 
 .card-footer {
   text-align: center;
@@ -114,7 +93,7 @@ label{
 
 .btn {
   border: none;
-  background-color: rgb(250, 98, 98);
+  background-color: #fa6262;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -122,33 +101,52 @@ label{
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 20px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
 }
-.btn:hover {
-  background-color: transparent;
-}
-
-.float-right {
-  float: right;
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
 }
 
 
 
-@media (max-width: 690px) {
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width:auto;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: both;
+  overflow: auto ;
+}
+
+.form {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+@media (min-width: 500px) {
   .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-
- 
-
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
-}
-}
+    font-size: 1rem; 
+  }}
