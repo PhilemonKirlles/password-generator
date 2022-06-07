@@ -18,26 +18,25 @@
 Generating random password. 
 
 ## Description
-A web-based application for generati
+A web-based application for generating random passwords. The application allowes for specifiying the type and the lenght of chractures to be generated. Options include the latin charset number 65-90 (CAPITAL) letters, the latin charset number 97-122 (small), the latin charset number 48-57 (digits),and the charset numbers 58-64, 91-96, and 123-126. Small letters are the defult option. The lenght option allowes for choosing between 8 to 128 chrachters per generated password. 
 
 
 
 #### Technologies
-- Google Maps
-- ???
--???
+* HTML5
+* CSS
+* JavaScript
+* markdown
 
 ## Built With
 * HTML5
 * CSS
-* Bulma
 * JavaScript
 * markdown
 ---
 
 ## How To Use
-explore the website and plan your next beach acticity 
-Visual marking and description of the app features.
+
 
 #### Installation
 N/A
@@ -45,8 +44,8 @@ N/A
 ---
 
 ## References
-API
-API
+source code reposotory
+W3 school charset
 ???
 ????
 ???
@@ -55,41 +54,24 @@ API
 
 ## License
 
-bootcamp class License
 
-Copyright (c) [2022] [???sunny side up team???]
+UConn bootcamp class License
+
+Copyright (c) [2022] [CatFishChisal]
 
 ---
 
 ## Author Info
--name- [Raymond,Eric]
--email- []
--social media- [???]
--protfolio- [?????]
 
--name- [Kocaj,Lawrence]
--email- [?????]
--social media- [???]
--protfolio- [?????]
-
--name- [King,Sarah]
--email- [?????]
--social media- [???]
--protfolio- [?????]
 
 -name- [AbdEllah,Philemon]
--email- [?????]
+-email- [philemon.kirlles@gmail.com]
 -social media- [???]
--protfolio- [?????]
+-protfolio- [github reposotory]
 ## Website
-https://philemonkirlles.github.io/???/
 
 ---
 
-## Contribution
-Name (firstname,alphabetically)
-1-
-2-
-3-
-4-
+## Contribution and credit
+1- Philemon AbdEllah Kirlles
 
