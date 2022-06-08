@@ -21,15 +21,16 @@ function generate() {
   uppercase.addEventListener("input", syncLength);
   symbols.addEventListener("input", syncLength);
 
-  function passwordCopy() {
-    /* Get the text field */
-    var copyPassword = document.getElementById("password");
+  // To Be Continued:
+  //function passwordCopy() {
+  //   /* Get the text field */
+  //   var copyPassword = document.getElementById("password");
 
-    /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyPassword.value);
-    /* Alert the copied text */
-    alert("Copied the password: " + copyPassword.value);
-  }
+  //   /* Copy the text inside the text field */
+  //   navigator.clipboard.writeText(copyPassword.value);
+  //   /* Alert the copied text */
+  //   alert("Copied the password: " + copyPassword.value);
+  // }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -66,11 +67,13 @@ function generate() {
   }
 
   // length value function
+  
   function syncLength(e) {
-    const value = (e.target.value = value);
     length.value = value;
+    const value = (e.target.value = value);
+    
   }
-
+  console.log (e);
   function arrayFromLowToHigh(low, high) {
     const array = [];
     for (let i = low; i <= high; i++) {
