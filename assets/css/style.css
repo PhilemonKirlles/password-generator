@@ -82,6 +82,12 @@ span {
             box-sizing: border-box;
 
 }
+
+#copy{
+font-size:16px;
+color:#fa6262;
+float:right;
+}
 /* Style inputs, select elements and textareas */
 
 .card-footer {
