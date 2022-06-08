@@ -57,9 +57,78 @@ function generate() {
     if (numbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES);
     if (symbols) charCodes = charCodes.concat(SYMBOLS_CHAR_CODES);
 
-  passwordText.value = password;
+  const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57);
+  const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122);
+  const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90);
+  const SYMBOLS_CHAR_CODES = arrayFromLowToHigh(33, 47)
+    .concat(arrayFromLowToHigh(58, 64))
+    .concat(arrayFromLowToHigh(91, 96))
+    .concat(arrayFromLowToHigh(123, 126));
 
+  length.addEventListener("input", syncLength);
+  numbers.addEventListener("input", syncLength);
+  uppercase.addEventListener("input", syncLength);
+  symbols.addEventListener("input", syncLength);
+
+  // To Be Continued:
+  //function passwordCopy() {
+  //   /* Get the text field */
+  //   var copyPassword = document.getElementById("password");
+
+  //   /* Copy the text inside the text field */
+  //   navigator.clipboard.writeText(copyPassword.value);
+  //   /* Alert the copied text */
+  //   alert("Copied the password: " + copyPassword.value);
+  // }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const length = e.target[0].value;
+    const numbers = e.target[2].checked;
+    const uppercase = e.target[1].checked;
+    // const lowercase = lowercaseElement.checked;
+    const symbols = e.target[3].checked;
+    console.log(e);
+    const generatePassword = writePassword(length, numbers, uppercase, symbols);
+    password.innerText = generatePassword;
+  });
+
+  // Get references to the #generate element
+  // var generateBtn = document.querySelector("#generate");
+
+  // Write password to the #password input
+
+  function writePassword(length, numbers, uppercase, symbols) {
+    let charCodes = LOWERCASE_CHAR_CODES;
+    if (uppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
+    if (numbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES);
+    if (symbols) charCodes = charCodes.concat(SYMBOLS_CHAR_CODES);
+
+    const passwordCharacters = [];
+    //for loop: using (Math.random )
+    for (let i = 0; i < length; i++) {
+      const characterCode =
+        charCodes[Math.floor(Math.random() * charCodes.length)];
+      passwordCharacters.push(String.fromCharCode(characterCode));
+    }
+    console.log(passwordCharacters);
+    return passwordCharacters.join("");
+  }
+
+  // length value function
+  
+  function syncLength(e) {
+    length.value = value;
+    const value = (e.target.value = value);
+    
+  }
+  console.log (e);
+  function arrayFromLowToHigh(low, high) {
+    const array = [];
+    for (let i = low; i <= high; i++) {
+      array.push(i);
+    }
+    return array;
+  }
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generate();

@@ -5,45 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Password Generator</h1>
+        <h1><span>Password Generator</span></h1>
       </header>
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+
         <div class="card-body">
+          <div class="pw-box">
           <textarea
             readonly
+          name="password"
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          </div>
+          <br>
+          <!-- <button onclick="passwordCopy()" id="copy">Copy Password</button>
+          </div> -->
           <!-- password criterion -->
+          <div class="form-box">
           <form id="stopDefultValue" class="form">
-            <label for="length">Number of Characters</label>
-          <input type="numbers" value="9" min="8" max="128" id="length">
-          <label for="uppercase">Include Uppercase</label>
-          <input type="checkbox" id="uppercase">
-          <label for="lowercase">Include Lowercase</label>
-          <input type="checkbox" id="lowercase">
-          <label for="numbers">Include Numbers</label>
-          <input type="checkbox" id="numbers">
-          <label for="symbols">Include Special-Characters</label>
-          <input type="checkbox" id="symbols">
-
-
+            <li><label class="label" for="length">Number of Characters</label>
+            <input class="input" type="numbers" value="8" min="8" max="128" id="length"/></li>
+            <br>
+            <li><label for="uppercase">Include Uppercase</label>
+            <input type="checkbox" id="uppercase" /></li>
+            <!-- <label for="lowercase">Include Lowercase</label>
+          <input type="checkbox" id="lowercase"> -->
+          <br>
+          <li><label for="numbers">Include Numbers</label>
+            <input type="checkbox" id="numbers" /></li>
+          <br>
+          <li><label for="symbols">Include Special-Characters</label>
+            <input type="checkbox" id="symbols" /></li>
+<br>
+            <div class="card-footer">
+              <button type="submit" id="generate" class="btn">
+                Generate Password
+              </button>
+            </div>
           </form>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          </div>
         </div>
       </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
