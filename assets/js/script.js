@@ -1,14 +1,12 @@
 // Assignment code here
 function generate() {
-
-const password = document.getElementById("password");
-const length = document.getElementById("length");
-const numbers = document.getElementById("numbers");
-const uppercase = document.getElementById("uppercase");
-const lowercase = document.getElementById("lowercase");
-const symbols = document.getElementById("symbols");
-const form = document.getElementById("stopDefultValue");
-  
+  const password = document.getElementById("password");
+  const length = document.getElementById("length");
+  const numbers = document.getElementById("numbers");
+  const uppercase = document.getElementById("uppercase");
+  // const lowercase = document.getElementById("lowercase");
+  const symbols = document.getElementById("symbols");
+  const form = document.getElementById("stopDefultValue");
 
   const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57);
   const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122);
@@ -22,18 +20,16 @@ const form = document.getElementById("stopDefultValue");
   numbers.addEventListener("input", syncLength);
   uppercase.addEventListener("input", syncLength);
   symbols.addEventListener("input", syncLength);
-  
 
   function passwordCopy() {
     /* Get the text field */
     var copyPassword = document.getElementById("password");
 
-      /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyPassword.value);
-   /* Alert the copied text */
-   alert("Copied the password: " + copyPassword.value);
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyPassword.value);
+    /* Alert the copied text */
+    alert("Copied the password: " + copyPassword.value);
   }
-  
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -43,12 +39,7 @@ const form = document.getElementById("stopDefultValue");
     // const lowercase = lowercaseElement.checked;
     const symbols = e.target[3].checked;
     console.log(e);
-    const generatePassword = writePassword(
-      length,
-      numbers,
-      uppercase,
-      symbols
-    );
+    const generatePassword = writePassword(length, numbers, uppercase, symbols);
     password.innerText = generatePassword;
   });
 
@@ -58,7 +49,6 @@ const form = document.getElementById("stopDefultValue");
   // Write password to the #password input
 
   function writePassword(length, numbers, uppercase, symbols) {
-  
     let charCodes = LOWERCASE_CHAR_CODES;
     if (uppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
     if (numbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES);
