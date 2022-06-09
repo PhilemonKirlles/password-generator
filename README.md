@@ -1,6 +1,6 @@
 # password-generator
 
-![Project Image]()
+![Project Image](./assets/images/password-generator.png)
 
 ---
 
@@ -36,7 +36,10 @@ A web-based application for generating random passwords. The application allowes
 ---
 
 ## How To Use
-
+1-Type the number of chractures you wish your password to be
+2-Check the boxes that fits your criteria.
+3- click on the "Generate password" button. 
+4- copy your password from the textarea.
 
 #### Installation
 N/A
@@ -69,7 +72,7 @@ Copyright (c) [2022] [CatFishChisal]
 -social media- [???]
 -protfolio- [github reposotory]
 ## Website
-
+https://philemonkirlles.github.io/password-generator/
 ---
 
 ## Contribution and credit
