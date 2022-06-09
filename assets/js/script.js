@@ -8,6 +8,7 @@ function generate() {
   const symbols = document.getElementById("symbols");
   const form = document.getElementById("stopDefultValue");
 
+  
   const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57);
   const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122);
   const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90);
