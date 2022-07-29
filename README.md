@@ -60,7 +60,7 @@ W3 school charset
 
 UConn bootcamp class License
 
-Copyright (c) [2022] [CatFishChisal]
+Copyright (c) [2022] [CatFishChisel]
 
 ---
 
